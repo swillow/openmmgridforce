@@ -6,6 +6,9 @@ conda install -c conda-forge gxx_linux-64
 conda install -c conda-forge cmake
 conda install -c conda-forge swig
 conda install -c conda-forge netcdf4
+## (on macOS-64)
+conda install -c conda-forge clang_osx-64
+conda install -c conda-forge clangxx_osx-64
 
 ### (Compile and install C++ codes) ###
 0) The current directory is at ./openmmgridforce

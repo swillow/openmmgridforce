@@ -7,7 +7,7 @@ PROJECT(OpenMMGridForcePlugin)
 
 # We need to know where OpenMM is installed so we can access the headers and libraries.
 #SET(OPENMM_DIR "/usr/local/openmm" CACHE PATH "Where OpenMM is installed")
-SET(OPENMM_DIR "/home/willow/anaconda3/envs/omm3" CACHE PATH "Where OpenMM is installed")
+SET(OPENMM_DIR "/Users/willow/opt/miniconda3/envs/omm3" CACHE PATH "Where OpenMM is installed")
 INCLUDE_DIRECTORIES("${OPENMM_DIR}/include")
 LINK_DIRECTORIES("${OPENMM_DIR}/lib" "${OPENMM_DIR}/lib/plugins")
 
@@ -25,7 +25,8 @@ IF(${CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT})
     IF(WIN32)
         SET(CMAKE_INSTALL_PREFIX "$ENV{ProgramFiles}/OpenMM" CACHE PATH "Where to install the plugin" FORCE)
     ELSE(WIN32)
-	SET(CMAKE_INSTALL_PREFIX "/usr/local/openmm" CACHE PATH "Where to install the plugin" FORCE)
+	 #	SET(CMAKE_INSTALL_PREFIX "/usr/local/openmm" CACHE PATH "Where to install the plugin" FORCE)
+	 SET(CMAKE_INSTALL_PREFIX "${OPENMM_DIR}" CACHE PATH "Where to install the plugin" FORCE)
     ENDIF(WIN32)
 ENDIF(${CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT})
 
