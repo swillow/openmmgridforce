@@ -1,0 +1,7 @@
+1) swig: gridforceplugin.i --> GridForcePluginWrapper.cpp
+(You need to provide a correct header directory where OpenMM and openmmgridforce are installed.)
+swig -python -c++ -o GridForcePluginWrapper.cpp -I/home/willow/anaconda3/envs/omm3/include gridforceplugin.i
+2) python setup.py build
+3) python setup.py install
+# Now you can testify the Test*py.
+4) python Test*.py

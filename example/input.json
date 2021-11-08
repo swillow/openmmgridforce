@@ -1,0 +1,52 @@
+{
+    "run_job" : "CD",
+    "nstate"  : 21,
+    "work_dir" : "./2bm2/Sim1",
+    "ntrial_repX" : 5,
+    "ntrial_gMC"  : 0,
+    "nstep_MD"    : 200,
+    "nstep_equil" : 5000,
+    "BC" : 
+    {
+	"T_HIGH" : 600.0,
+	"T_SIMMIN" : 300.0,
+	"T_TARGET" : 300.0,
+	"H_mass"   : 4.0,
+	"delta_t"  : 4.0,
+	"solvation" : "Desolvated"
+    },
+    "CD" : 
+    {
+	"T_HIGH" : 600.0,
+	"T_SIMMIN" : 300.0,
+	"T_TARGET" : 300.0,
+	"H_mass"   : 4.0,
+	"delta_t"  : 4.0,
+	"solvation" : "Desolvated",
+	"site" : "Sphere",
+	"site_max_R" : 1.5,
+	"site_density" : 10.0,
+	"site_measured" : null,
+	"pose" : -1,
+	"k_pose" : 1000.0,
+	"MCMC_moves" : 1,
+	"rmsd" : false,
+	"receptor_phase" : null
+    },
+    "dir" :
+    {
+	"ligand_prmtop" : "2bm2/ligand.prmtop",
+	"ligand_inpcrd" : "2bm2/ligand.trans.inpcrd",
+	"receptor_prmtop" : "2bm2/receptor.prmtop",
+	"receptor_inpcrd" : "2bm2/receptor.trans.inpcrd"
+    },
+    "grids" :
+    {
+	"desolv" : "2bm2/grids/desolv.nc",
+	"LJa" : "2bm2/grids/LJa.nc",
+	"LJr" : "2bm2/grids/LJr.nc",
+	"direct_elec" : "2bm2/grids/direct_ele.nc",
+	"pbsa" : "2bm2/grids/pbsa.nc"
+    }
+}
+
