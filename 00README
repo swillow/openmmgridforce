@@ -12,16 +12,15 @@ conda install -c conda-forge clangxx_osx-64
 
 ### (Compile and install C++ codes) ###
 0) The current directory is at ./openmmgridforce
+Modify 'CMakeLists.txt' as follows:
+---(update where OpenMM is installed)---
+SET(OPENMM_DIR "/Users/willow/opt/miniconda3/envs/omm3" CACHE PATH "Where OpenMM is installed")
+---
 1) make a build directory
 mkdir ../openmmgridforce_build
 cd ../openmmgridforce_build
 2) type cmake
 cmake ../openmmgridforce
-3) modify CMakeCache.txt (provide where the conda_environment 'omm3' directory)
-'''
-//Where to install the     plugin
-CMAKE_INSTALL_PREFIX:PATH=/home/willow/anaconda3/envs/omm3
-'''
 4) type make
 make
 5) install (files will be installed into CMAKE_INSTALL_PREFIX)
