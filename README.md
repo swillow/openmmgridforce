@@ -6,10 +6,11 @@ Currently, the `openmmgridforce` plugin is available within the "reference imple
 
 ## How to install from source
 
-### Requirements
+### Requirements (Note: openmm used SWIG 3 for all builds)
 * conda create -n omm3
 * conda activate omm3
-* conda install -c conda-forge openmm cmake swig netcdf4
+* conda install -c conda-forge openmm cmake netcdf4
+* conda install -c conda-forge swig=3.0.12
 
 #### on macOS-64
 * conda install -c conda-forge clang_osx-64 clangxx_osx-64
